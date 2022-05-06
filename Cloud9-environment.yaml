@@ -1,0 +1,43 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: AWS CloudFormation template provisioning AWS Cloud9.
+Parameters:
+  Cloud9InstanceType:
+    Description: Cloud9 instance type
+    Type: String
+    Default: t3.small
+  GitRepositoryURL:
+    Description: The Git repository URL for the project we are cloning
+    Type: String
+    Default: https://github.com/abhishekjawali/ecs-fis.git
+
+Resources:
+  Cloud9Instance:
+    Description: "Cloud9 environment for the ANZ Summit DevLabs"
+    Type: AWS::Cloud9::EnvironmentEC2
+    Properties:
+      Description: AWS Cloud9 instance
+      AutomaticStopTimeMinutes: 3600
+      InstanceType:
+        Ref: Cloud9InstanceType
+      Name:
+        Ref: AWS::StackName
+      Repositories:
+        -
+           PathComponent: /devlabs
+           RepositoryUrl: !Ref GitRepositoryURL
+      Tags: 
+        - 
+          Key: Environment
+          Value: DevLabs
+
+Outputs: 
+  Cloud9IDE:
+    Value:
+      Fn::Join:
+      - ''
+      - - https://
+        - Ref: AWS::Region
+        - ".console.aws.amazon.com/cloud9/ide/"
+        - Ref: Cloud9Instance
+        - "?region="
+        - Ref: AWS::Region

@@ -1,0 +1,8 @@
+{
+  "EcsFisStack": {
+    "SampleAppServiceServiceURLB19EB345": "http://EcsFi-Sampl-JIY9YPBPAC4N-1108599863.us-west-2.elb.amazonaws.com",
+    "FISIamRoleArn": "arn:aws:iam::885629272022:role/EcsFisStack-fisrole33E76559-5JCV3FZUE7L0",
+    "SampleAppServiceLoadBalancerDNS8AC6FED2": "EcsFi-Sampl-JIY9YPBPAC4N-1108599863.us-west-2.elb.amazonaws.com",
+    "FisEcsUrl": "http://EcsFi-Sampl-JIY9YPBPAC4N-1108599863.us-west-2.elb.amazonaws.com"
+  }
+}
