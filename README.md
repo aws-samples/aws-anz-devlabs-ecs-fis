@@ -206,4 +206,4 @@ Thank you for participating in this lab. Please leave us feedback to let us know
 https://eventbox.dev/survey/EMFOX59)
 
 
-![Survey QR Code](/document/images/qr_code.png)
+![Survey QR Code](/document/images/qr-code.png)
