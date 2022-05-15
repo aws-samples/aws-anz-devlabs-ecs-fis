@@ -16,6 +16,7 @@ You will execute the following experiment scenarios against an application that 
 ![Cloud9 Search](/document/images/cloud9_search.png)
 
 2. Under `Your environments`, open the **Chaos Engineering on ECS (Level 300)** Cloud9 instance by clicking on **Open IDE**
+
 ![Open IDE](document/images/cloud9_open_ide.png)
 
 3. Execute the following command. It will take approximately 5 mins to create all the required resources
