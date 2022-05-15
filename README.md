@@ -13,13 +13,14 @@ You will execute the following experiment scenarios against an application that 
 ## Environment Setup (This has to be performed by operator. This is a one time setup only)
 
 1. To access Cloud9 search for `Cloud9` in the AWS Console and click on Cloud9.
+
 ![Cloud9 Search](/document/images/cloud9_search.png)
 
 2. Under `Your environments`, open the **Chaos Engineering on ECS (Level 300)** Cloud9 instance by clicking on **Open IDE**
 
 ![Open IDE](document/images/cloud9_open_ide.png)
 
-3. Execute the following command. It will take approximately 5 mins to create all the required resources
+3. Execute the following command in your Cloud9 terminal window. It will take approximately 5 mins to create all the required resources
     ```
     cd ~/environment/devlabs
     ./setup.sh
@@ -207,9 +208,11 @@ b. **Second step** is actual running of the experiment.
 
 </details>
 
-### Survey
-Thank you for participating in this lab. Please leave us feedback to let us know how we did and for us to improve in future labs. If the QR code below doesn't work, you can click on the [link](	
-https://eventbox.dev/survey/EMFOX59)
 
+### Conclusion and survey
 
-![Survey QR Code](/document/images/qr-code.png) 
+Thank you for participating in this lab. Please leave us feedback to let us know how we did and for us to improve in future labs. If the QR code below doesn't work, you can click on the link [here](https://eventbox.dev/survey/EMFOX59).
+
+![Survey QR Code](document/images/qr_code.png)
+
+Please do not forget to close your Cloud9 IDE.
