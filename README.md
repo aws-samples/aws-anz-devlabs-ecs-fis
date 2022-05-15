@@ -12,8 +12,13 @@ You will execute the following experiment scenarios against an application that 
 
 ## Environment Setup (This has to be performed by operator. This is a one time setup only)
 
-1. Login to the Cloud9 instance that is already provisioned for you.   
-2. Execute the following command. It will take approximately 5 mins to create all the required resources
+1. To access Cloud9 search for `Cloud9` in the AWS Console and click on Cloud9.
+![Cloud9 Search](/document/images/cloud9_search.png)
+
+2. Under `Your environments`, open the **Chaos Engineering on ECS (Level 300)** Cloud9 instance by clicking on **Open IDE**
+![Open IDE](document/images/cloud9_open_ide.png)
+
+3. Execute the following command. It will take approximately 5 mins to create all the required resources
     ```
     cd ~/environment/devlabs
     ./setup.sh
