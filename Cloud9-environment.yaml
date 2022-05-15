@@ -1,26 +1,30 @@
 AWSTemplateFormatVersion: '2010-09-09'
-Description: AWS CloudFormation template provisioning AWS Cloud9.
+Description: Cloud9 environment for the ANZ Summit DevLabs.
 Parameters:
+  Cloud9EnvironmentName:
+    Description: Chaos Engineering on ECS (Level 300)
+    Type: String
+    Default: Chaos-Engineering-on-ECS-Level300
   Cloud9InstanceType:
     Description: Cloud9 instance type
     Type: String
-    Default: t3.small
+    Default: m5.large
   GitRepositoryURL:
     Description: The Git repository URL for the project we are cloning
     Type: String
-    Default: https://github.com/abhishekjawali/ecs-fis.git
+    Default: https://github.com/aws-samples/aws-anz-devlabs-ecs-fis.git
 
 Resources:
   Cloud9Instance:
     Description: "Cloud9 environment for the ANZ Summit DevLabs"
     Type: AWS::Cloud9::EnvironmentEC2
     Properties:
-      Description: AWS Cloud9 instance
-      AutomaticStopTimeMinutes: 3600
+      Description: Run Chaos Engineering experiments on Amazon Elastic Container Service with AWS Fault Injection Simulator
+      AutomaticStopTimeMinutes: 4320
+      Name: 
+        !Join [ "-", [ Ref: Cloud9EnvironmentName, Ref: AWS::StackName] ]
       InstanceType:
         Ref: Cloud9InstanceType
-      Name:
-        Ref: AWS::StackName
       Repositories:
         -
            PathComponent: /devlabs
@@ -31,7 +35,11 @@ Resources:
           Value: DevLabs
 
 Outputs: 
-  Cloud9IDE:
+  LabEnvironment:
+    Description: Chaos Engineering on ECS (Level 300)
+    Export:
+      Name: 
+        !Join [ "-", [ Ref: Cloud9EnvironmentName, Ref: AWS::StackName] ]
     Value:
       Fn::Join:
       - ''

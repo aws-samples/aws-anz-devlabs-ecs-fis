@@ -200,3 +200,10 @@ b. **Second step** is actual running of the experiment.
 ![ECS Events](/document/images/2-ECS-Events.png "ECS Events")
 
 </details>
+
+### Survey
+Thank you for participating in this lab. Please leave us feedback to let us know how we did and for us to improve in future labs. If the QR code below doesn't work, you can click on the [link](	
+https://eventbox.dev/survey/EMFOX59)
+
+
+![Survey QR Code](/document/images/qr_code.png)
